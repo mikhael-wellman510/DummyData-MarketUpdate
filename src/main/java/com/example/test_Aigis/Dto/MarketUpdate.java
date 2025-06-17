@@ -11,5 +11,5 @@ import java.util.List;
 @Builder(toBuilder = true)
 public class MarketUpdate {
     List<IndicativeRatesDto>indicativeRatesDtos;
-    List<MarketDto> marketDtos;
+    List<MarketDto> marketDto;
 }
