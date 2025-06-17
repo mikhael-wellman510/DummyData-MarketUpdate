@@ -11,6 +11,6 @@ import java.util.List;
 @Builder(toBuilder = true)
 public class MarketUpdate {
     private String urlPdf;
-    private List<IndicativeRatesDto>indicativeRatesDtos;
+    private List<IndicativeRatesDto>indicativeRatesDto;
     private List<MarketDto> marketDto;
 }
