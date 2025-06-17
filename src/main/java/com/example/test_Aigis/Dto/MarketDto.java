@@ -1,4 +1,5 @@
-package com.example.test_Aigis.MarketUpdate;
+package com.example.test_Aigis.Dto;
+
 
 import lombok.*;
 
@@ -9,9 +10,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class FixedIncome {
+public class MarketDto {
     private String tittle;
-    private List<String>fixedIncome;
-    private List<String>fixedIncomeAll;
-
+    private List<String> data;
+    private List<String> allData;
 }
