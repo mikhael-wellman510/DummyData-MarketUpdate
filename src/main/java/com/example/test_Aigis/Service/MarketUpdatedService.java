@@ -16,9 +16,11 @@ public class MarketUpdatedService {
 
    public MarketUpdate marketUpdatesNew(){
 
+       String url = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
        return MarketUpdate.builder()
+               .urlPdf(url)
                .indicativeRatesDtos(indicativeRatesDtos())
-               .marketDtos(marketDtos())
+               .marketDto(marketDtos())
                .build();
    }
 

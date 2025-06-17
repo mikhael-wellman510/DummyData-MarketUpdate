@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class MarketUpdate {
-    List<IndicativeRatesDto>indicativeRatesDtos;
-    List<MarketDto> marketDto;
+    private String urlPdf;
+    private List<IndicativeRatesDto>indicativeRatesDtos;
+    private List<MarketDto> marketDto;
 }
