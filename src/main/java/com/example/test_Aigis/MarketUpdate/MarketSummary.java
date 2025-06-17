@@ -14,5 +14,6 @@ import java.util.List;
 public class MarketSummary {
     private String tittle;
     private List<String>marketSummary;
+    private List<String>marketSummaryAll;
 
 }

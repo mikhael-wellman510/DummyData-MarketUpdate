@@ -27,7 +27,6 @@ public class MarketUpdateService {
     Market market(){
         return Market.builder()
                 .marketSummary(marketSummary())
-                .marketSummaryAll(marketSummaryAll())
                 .domesticNewsUpdate(domesticNewsUpdate())
                 .globalNewUpdates(globalNewUpdates())
                 .fixedIncome(fixedIncome())
@@ -40,22 +39,19 @@ public class MarketUpdateService {
         return MarketSummary.builder()
                 .tittle("Market Sumary")
                 .marketSummary(List.of("Lonjakan impor di Amerika Serikat (AS) xxxx","Rentang perdagangan USD/IDR xxxx","Pasar Obligasi Negara Indonesia xxxx","Arus dana asing xxxx"))
-                .build();
-    }
-
-    MarketSummaryAll marketSummaryAll(){
-
-        return MarketSummaryAll.builder()
-                .tittle("Market Summary All")
                 .marketSummaryAll(List.of("Lonjakan impor di Amerika Serikat (AS) terjadi menjelang kenaikan tarif dan menyebabkan neraca perdagangan mengalami defisit terbesar sepanjang masa. Pada Januari 2025, impor AS mencapai USD 402,1 miliar dan defisit perdagangan sebesar USD 91,5 miliar. Sebagai perbandingan, impor barang Indonesia pada saat yang sama sebesar USD 18 miliar atau kurang dari 5%. AS sempat tutup lebih dari 5% pada sesi sebelumnya, sejak 5 November 2024.","Rentang perdagangan USD/IDR pada hari ini diperkirakan antara 16.100 – 16.400. Pada hari Kamis lalu, JISDOR Bank Indonesia berada di kisaran 16.250.","Pasar Obligasi Negara Indonesia ditutup pada yield penutupan hari Kamis adalah 6,37% (1Y), 6,52% (3Y), 6,77% (5Y), 6,82% (10Y) dan 6,92% (15Y), sedangkan premi credit default swap (CDS) tenor 5 tahun berada di 84 bps.","Arus dana asing dan penutupan indeks reksadana real estat terpantau ada tekanan. Indeks saham AS naik di tengah kenaikan biaya tenaga kerja dan suku bunga. Di pasar Indonesia, investor asing melakukan net sell senilai IDR 3,7 miliar, dan IDR 21,5 miliar, kepemilikan asing pada obligasi pemerintah naik IDR 544 miliar pada perdagangan 5 Maret 2025."))
                 .build();
     }
+
 
     DomesticNewsUpdate domesticNewsUpdate(){
         return DomesticNewsUpdate.builder()
                 .tittle("Domestic News Update")
                 .domesticNewsUpdate(List.of("Harga Tandan Pangan Segar (TBS) ditetapkan sebesar Rp3.757 per KG, berlaku mulai 1 Maret 2025. Ini merupakan harga tertinggi yang tercatat di Indonesia" ,"Mendag angkat bicara terkait kontroversi viral TikTok soal volume Minyakita: seharusnya 1 liter, bukan 750 ml.","Indonesia tetap berkomitmen untuk memperkuat kerja sama ekonomi dan perdagangan dengan semua negara, termasuk AS, di tengah perang dagang yang masih berlangsung.\n" +
                         "\n"))
+                .domesticNewsUpdateAll(List.of("Penetapan harga Tandan Buah Segar (TBS) sebesar Rp3.757 per kilogram mulai 1 Maret 2025 mencerminkan kebijakan penting yang berdampak luas, baik dari segi ekonomi, sosial, maupun industri. Harga ini merupakan yang tertinggi dalam sejarah industri sawit Indonesia, dan menjadi indikator bahwa nilai komoditas kelapa sawit masih sangat strategis, baik di pasar domestik maupun internasional.\n" +
+                        "\n" +
+                        "Kebijakan ini memberikan angin segar bagi para petani kelapa sawit, khususnya petani rakyat yang selama ini sangat bergantung pada harga TBS sebagai sumber pendapatan utama. Dengan harga yang tinggi, para petani diharapkan dapat meningkatkan taraf hidupnya, memperbaiki kesejahteraan keluarga, serta memiliki modal lebih baik untuk merawat dan meningkatkan produktivitas kebun mereka. Selain itu, harga yang adil juga menjadi bentuk penghargaan terhadap kerja keras mereka dalam menjaga rantai pasok minyak sawit."))
                 .build();
     }
 
@@ -64,6 +60,7 @@ public class MarketUpdateService {
                 .tittle("Global News Updates")
                 .globalNewsUpdates(List.of("Presiden Trump menunda tarif barang USMCA hingga 2 April, sehingga membebaskan mobil, suku cadang, dan kalium (yang banyak digunakan untuk pupuk) dari bea masuk yang tinggi." ,"Malaysia menyetujui kontribusi EPF pekerja asing sebesar 2% mulai 4025.","Kelompok Thailand mendesak strategi proaktif untuk mengurangi dampak kebijakan perdagangan AS.\n" +
                         "\n"))
+                .globalNewsUpdatesAll(List.of("Keputusan Presiden Trump untuk menunda tarif hingga 2 April 2025 mencerminkan pendekatan yang lebih hati-hati terhadap kebijakan perdagangan luar negeri. Dengan menangguhkan bea masuk terhadap mobil, suku cadang, dan kalium, pemerintahan AS berupaya melindungi ekonomi domestik dari lonjakan harga, mendukung stabilitas sektor pertanian dan otomotif, serta membuka ruang negosiasi lebih lanjut dengan mitra dagang utama seperti Meksiko dan Kanada. Kebijakan ini juga bisa dipandang sebagai sinyal bahwa AS masih menghargai stabilitas kerja sama regional di tengah meningkatnya proteksionisme global."))
                 .build();
     }
 
@@ -71,6 +68,7 @@ public class MarketUpdateService {
         return FixedIncome.builder()
                 .tittle("Fixed Income")
                 .fixedIncome(List.of("Tidak ada pembaruan hari ini."))
+                .fixedIncomeAll(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
                 .build();
     }
 

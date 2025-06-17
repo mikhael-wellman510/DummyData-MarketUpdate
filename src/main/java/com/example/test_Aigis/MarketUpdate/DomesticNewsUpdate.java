@@ -13,4 +13,5 @@ import java.util.List;
 public class DomesticNewsUpdate {
     private String tittle;
     private List<String>domesticNewsUpdate;
+    private List<String>domesticNewsUpdateAll;
 }

@@ -12,5 +12,6 @@ import java.util.List;
 public class FixedIncome {
     private String tittle;
     private List<String>fixedIncome;
+    private List<String>fixedIncomeAll;
 
 }

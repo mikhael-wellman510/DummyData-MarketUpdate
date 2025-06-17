@@ -13,4 +13,5 @@ import java.util.List;
 public class GlobalNewUpdates {
     private String tittle;
     private List<String>globalNewsUpdates;
+    private List<String>globalNewsUpdatesAll;
 }
