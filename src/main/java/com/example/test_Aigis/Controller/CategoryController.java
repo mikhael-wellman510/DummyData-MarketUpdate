@@ -13,7 +13,7 @@ public class CategoryController {
     //dd
     private final CategoryService categoryService;
 
-    @GetMapping("/category")
+    @GetMapping("/categorys")
     public ResponseEntity<?>categoryService(@RequestParam(defaultValue = "0" ,name = "id")Integer id){
 
         var res = categoryService.categories(id);
@@ -22,7 +22,12 @@ public class CategoryController {
     }
 
     @GetMapping("/test")
-    public ResponseEntity<?>tes(){
+    public ResponseEntity<?>testing(){
         return ResponseEntity.ok("Cek");
+    }
+
+    @GetMapping("/test1")
+    public String test(){
+        return "Cek";
     }
 }
