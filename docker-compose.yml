@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.9'  # Naikkan versi ke 3.9 agar bisa pakai condition: service_healthy
 
 services:
   mysql:
@@ -22,7 +22,8 @@ services:
     image: mikhaelwellman28/dummy-genai:latest
     container_name: spring-app
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/market_db
       SPRING_DATASOURCE_USERNAME: root
