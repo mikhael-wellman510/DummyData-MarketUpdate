@@ -21,7 +21,7 @@ public class CategoryController {
         return ResponseEntity.ok(res);
     }
 
-    @GetMapping("/tes")
+    @GetMapping("/test")
     public ResponseEntity<?>tes(){
         return ResponseEntity.ok("Cek");
     }
