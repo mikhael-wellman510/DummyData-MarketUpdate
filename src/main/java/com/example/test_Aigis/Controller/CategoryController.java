@@ -20,4 +20,9 @@ public class CategoryController {
 
         return ResponseEntity.ok(res);
     }
+
+    @GetMapping("/tes")
+    public ResponseEntity<?>tes(){
+        return ResponseEntity.ok("Cek");
+    }
 }
