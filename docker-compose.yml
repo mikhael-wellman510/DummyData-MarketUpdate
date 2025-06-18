@@ -19,8 +19,7 @@ services:
       retries: 5
 
   spring-app:
-    build:
-      context: .
+    image: mikhaelwellman28/dummy-genai:latest
     container_name: spring-app
     depends_on:
       - mysql
