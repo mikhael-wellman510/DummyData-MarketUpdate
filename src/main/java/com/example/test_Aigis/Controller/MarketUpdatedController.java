@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MarketUpdatedController {
 
     private final MarketUpdatedService marketUpdatedService;
-
+    //d
     @GetMapping("/marketUpdate")
     public ResponseEntity<?>marketUpdate(){
 
