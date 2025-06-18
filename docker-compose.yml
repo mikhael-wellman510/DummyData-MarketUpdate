@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   spring-app:
-    image: your-dockerhub-username/spring-app:latest
+    image: mikhaelwellman28/dummy-genai
     ports:
       - "8080:8080"
     restart: always
