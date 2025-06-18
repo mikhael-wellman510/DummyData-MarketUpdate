@@ -1,7 +1,7 @@
 
 services:
   mysql:
-    image: mysql:8.0.36
+    image: mysql:8.0
     restart: always
     environment:
       MYSQL_DATABASE: market_db
