@@ -1,35 +1,26 @@
-version: '3.9'  # Naikkan versi ke 3.9 agar bisa pakai condition: service_healthy
-
+version: '3.8'
 services:
   mysql:
-    image: mysql:8
-    container_name: mysql-db
+    image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: adm1234
       MYSQL_DATABASE: market_db
-    ports:
-      - "3306:3306"
+      MYSQL_ROOT_PASSWORD: adm1234
     volumes:
       - mysql-data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p$MYSQL_ROOT_PASSWORD"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    ports:
+      - "3306:3306"
 
-  spring-app:
+  app:
     image: mikhaelwellman28/dummy-genai:latest
-    container_name: spring-app
     depends_on:
-      mysql:
-        condition: service_healthy
+      - mysql
+    ports:
+      - "8080:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/market_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: adm1234
-    ports:
-      - "8080:8080"
 
 volumes:
   mysql-data:

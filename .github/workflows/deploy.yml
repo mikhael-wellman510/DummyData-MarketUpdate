@@ -46,7 +46,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            export MYSQL_ROOT_PASSWORD=adm1234
             cd /mikhael-project/market-update
             docker-compose down
             docker pull ${{ secrets.DOCKER_USERNAME }}/dummy-genai:latest
