@@ -23,7 +23,7 @@ services:
       context: .
     container_name: spring-app
     depends_on:
-      - db
+      - mysql
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/market_db
       SPRING_DATASOURCE_USERNAME: root
