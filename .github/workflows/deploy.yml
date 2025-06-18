@@ -38,6 +38,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /mikhael-project/market-update
-            docker pull ${{ secrets.DOCKER_USERNAME }}/spring-app:latest
-            docker-compose down
+            docker-compose pull
             docker-compose up -d
+            docker-compose ps
