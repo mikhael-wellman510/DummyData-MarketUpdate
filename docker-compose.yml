@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.8'
 
 services:
   mysql:
@@ -13,23 +13,24 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p$MYSQL_ROOT_PASSWORD"]
       interval: 10s
       timeout: 5s
       retries: 5
+
   spring-app:
-    image: mikhaelwellman28/dummy-genai
-    container_name: dummy-genai
-    restart: always
-    ports:
-      - "8080:8080"
+    build:
+      context: .
+    container_name: spring-app
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/market_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: adm1234
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - "8080:8080"
 
 volumes:
   mysql-data:
