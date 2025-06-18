@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class Data {
-    //d
+    //dd
     private String currencyPair;
     private String last;
     private String prevWk;
