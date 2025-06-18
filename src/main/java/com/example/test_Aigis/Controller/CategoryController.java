@@ -13,7 +13,7 @@ public class CategoryController {
     //dd
     private final CategoryService categoryService;
 
-    @GetMapping("/categorys")
+    @GetMapping("/category")
     public ResponseEntity<?>categoryService(@RequestParam(defaultValue = "0" ,name = "id")Integer id){
 
         var res = categoryService.categories(id);
