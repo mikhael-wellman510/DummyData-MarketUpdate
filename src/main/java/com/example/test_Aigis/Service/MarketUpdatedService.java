@@ -28,36 +28,40 @@ public class MarketUpdatedService {
 
         List<IndicativeRatesDto>res = new ArrayList<>();
 
-        res.add(IndicativeRatesDto.builder()
-                .tittle("Cross Rates")
-                .data(List.of(
-                        Data.builder().currencyPair("AUD/EUR").last("12.33").prevWk("23.55").build(),
-                        Data.builder().currencyPair("EUR/IDR").last("10.33").prevWk("21.44").build(),
-                        Data.builder().currencyPair("GBP/IDR").last("0.33").prevWk("26.78").build(),
-                        Data.builder().currencyPair("INR/IDR").last("2.53").prevWk("80.55").build(),
-                        Data.builder().currencyPair("SGD/IDR").last("12.33").prevWk("93.55").build()
-                ))
-                .build());
+        for(int i = 0 ; i < 2 ; i++){
+            res.add(IndicativeRatesDto.builder()
+                    .tittle("Cross Rates")
+                    .data(List.of(
+                            Data.builder().currencyPair("AUD/EUR").last("12.33").prevWk("23.55").build(),
+                            Data.builder().currencyPair("EUR/IDR").last("10.33").prevWk("21.44").build(),
+                            Data.builder().currencyPair("GBP/IDR").last("0.33").prevWk("26.78").build(),
+                            Data.builder().currencyPair("INR/IDR").last("2.53").prevWk("80.55").build(),
+                            Data.builder().currencyPair("SGD/IDR").last("12.33").prevWk("93.55").build()
+                    ))
+                    .build());
 
-        res.add(IndicativeRatesDto.builder()
-                .tittle("Interest Rates")
-                .data(List.of(
-                        Data.builder().currencyPair("BI RATES").last("0.45").prevWk("2.44").build(),
-                        Data.builder().currencyPair("1M IDR Interbank").last("1.56").prevWk("3.44").build(),
-                        Data.builder().currencyPair("Id Inflation").last("0.75").prevWk("1.00").build(),
-                        Data.builder().currencyPair("USD Fed funds").last("0.25").prevWk("4.44").build()
-                ))
-                .build());
+            res.add(IndicativeRatesDto.builder()
+                    .tittle("Interest Rates")
+                    .data(List.of(
+                            Data.builder().currencyPair("BI RATES").last("0.45").prevWk("2.44").build(),
+                            Data.builder().currencyPair("1M IDR Interbank").last("1.56").prevWk("3.44").build(),
+                            Data.builder().currencyPair("Id Inflation").last("0.75").prevWk("1.00").build(),
+                            Data.builder().currencyPair("USD Fed funds").last("0.25").prevWk("4.44").build()
+                    ))
+                    .build());
 
-        res.add(IndicativeRatesDto.builder()
-                .tittle("Spot Rates")
-                .data(List.of(
-                        Data.builder().currencyPair("AUD/EUR").last("0.65").prevWk("0.66").build(),
-                        Data.builder().currencyPair("EUR/USD").last("0.24").prevWk("0.89").build(),
-                        Data.builder().currencyPair("GBP/USD").last("1.23").prevWk("2.45").build(),
-                        Data.builder().currencyPair("USD/JPY").last("4.66").prevWk("34.00").build()
-                ))
-                .build());
+            res.add(IndicativeRatesDto.builder()
+                    .tittle("Spot Rates")
+                    .data(List.of(
+                            Data.builder().currencyPair("AUD/EUR").last("0.65").prevWk("0.66").build(),
+                            Data.builder().currencyPair("EUR/USD").last("0.24").prevWk("0.89").build(),
+                            Data.builder().currencyPair("GBP/USD").last("1.23").prevWk("2.45").build(),
+                            Data.builder().currencyPair("USD/JPY").last("4.66").prevWk("34.00").build()
+                    ))
+                    .build());
+
+        }
+
         return res;
     }
     public List<MarketDto> marketDtos(){
