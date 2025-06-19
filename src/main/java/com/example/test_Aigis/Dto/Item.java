@@ -13,4 +13,5 @@ public class Item {
     private String tittle;
     private String dateTime;
     private String description;
+    private String category;
 }

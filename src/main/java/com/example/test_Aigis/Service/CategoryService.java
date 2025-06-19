@@ -18,22 +18,15 @@ public class CategoryService {
         List<Category>data = new ArrayList<>();
 
         int count = 0 ;
-        for (int i = 1 ; i <= 4 ; i++){
+        for (int i = 1 ; i <= 6 ; i++){
 
-            List<Item>items = new ArrayList<>();
-            for (int j = 0 ; j < 6 ; j++){
-                items.add(Item.builder()
+                data.add(Category.builder()
                                 .id(count++)
                                 .tittle("Tittle")
                                 .dateTime("Date/Time")
                                 .description("Description")
+                                .category("Category " + i)
                         .build());
-            }
-
-            data.add(Category.builder()
-                            .category(  "Category " + i)
-                            .item(items)
-                    .build());
         }
 
 

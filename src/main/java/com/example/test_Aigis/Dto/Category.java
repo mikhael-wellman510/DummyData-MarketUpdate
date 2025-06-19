@@ -12,9 +12,11 @@ import java.util.List;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class Category {
-    //t
+    private Integer id;
+    private String tittle;
+    private String dateTime;
+    private String description;
     private String category;
-    private List<Item>item;
 
 
 }
