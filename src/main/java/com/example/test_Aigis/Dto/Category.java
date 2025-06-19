@@ -17,6 +17,6 @@ public class Category {
     private String dateTime;
     private String description;
     private String category;
-
+    private String url;
 
 }
