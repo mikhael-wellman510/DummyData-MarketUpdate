@@ -28,7 +28,7 @@ public class CategoryService {
                         .build());
             }
 
-
+            log.info("List terbaru : -----");
         return res;
     }
 
