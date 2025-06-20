@@ -24,7 +24,8 @@ public class CategoryService {
             for (int i = 1 ; i < 5 ; i++){
                 res.add(CategoryName.builder()
                                 .id(id)
-                                .category("c" + i)
+                                .category("Category " + i)
+                                .categoryId("c" + i)
                         .build());
             }
 

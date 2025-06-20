@@ -10,4 +10,5 @@ import lombok.*;
 public class CategoryName {
     private Integer id;
     private String category;
+    private String categoryId;
 }
