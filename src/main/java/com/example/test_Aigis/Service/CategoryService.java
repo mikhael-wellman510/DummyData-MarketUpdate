@@ -1,6 +1,7 @@
 package com.example.test_Aigis.Service;
 
 import com.example.test_Aigis.Dto.Category;
+import com.example.test_Aigis.Dto.CategoryName;
 import com.example.test_Aigis.Dto.Item;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,9 +14,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CategoryService {
 
-    public List<String>listCategory(){
+    public List<CategoryName>listCategory(){
+            List<CategoryName> res = new ArrayList<>();
+            int id = 0;
+            for (int i = 1 ; i < 5 ; i++){
+                res.add(CategoryName.builder()
+                                .id(id++)
+                                .category("Category " + i)
+                        .build());
+            }
 
-        return List.of("Category 1" ,"Category 2" , "Category 3" , "Category 4");
+
+        return res;
     }
 
     public List<Category>categories(Integer id){
