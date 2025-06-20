@@ -19,7 +19,7 @@ public class CategoryService {
             int id = 1;
             for (int i = 1 ; i < 5 ; i++){
                 res.add(CategoryName.builder()
-                                .id("c"+id++)
+                                .id(id)
                                 .category("Category " + i)
                         .build());
             }
@@ -40,7 +40,7 @@ public class CategoryService {
                                 .tittle("Tittle")
                                 .dateTime("Date/Time")
                                 .description("Description")
-                                .category("Category " + i)
+                                .category("Category " + id)
                                 .url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFrvr6wHUjK4lsHgShVe5ToYSv-rz7NF_ohUIhMK28H_mo0Dy8pSQ29RTimoozvUBT_VdNoMlprR31xdgI11x5LBCERcXUwlzMbG57NvVXqHc8dsfw63FTYb-dzqOO8wFoZRIZv9LQieBSIKnPRLUqAhQPppfv2INeZK1AVbUiijb7bJhAXvwPcfIYQAQ/s640/DEMOCRAZY.ID%20(6)%20(Custom).jpg")
                         .build());
         }
