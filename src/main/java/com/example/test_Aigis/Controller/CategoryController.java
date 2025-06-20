@@ -21,7 +21,7 @@ public class CategoryController {
         return ResponseEntity.ok(res);
     }
 
-    @GetMapping("/test")
+    @GetMapping("/listCategory")
     public ResponseEntity<?>testing(){
 
         var res = categoryService.listCategory();
