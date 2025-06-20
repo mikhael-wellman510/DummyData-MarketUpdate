@@ -16,10 +16,10 @@ public class CategoryService {
 
     public List<CategoryName>listCategory(){
             List<CategoryName> res = new ArrayList<>();
-            int id = 0;
+            int id = 1;
             for (int i = 1 ; i < 5 ; i++){
                 res.add(CategoryName.builder()
-                                .id(id++)
+                                .id("c"+id++)
                                 .category("Category " + i)
                         .build());
             }
