@@ -5,12 +5,14 @@ import com.example.test_Aigis.Dto.CategoryName;
 import com.example.test_Aigis.Dto.Item;
 import com.example.test_Aigis.Dto.ListCategory;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.xml.catalog.Catalog;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class CategoryService {
@@ -56,7 +58,7 @@ public class CategoryService {
 
         }
 
-
+        log.info("data : {} " , data);
         if (id == 0){
 
             return data;

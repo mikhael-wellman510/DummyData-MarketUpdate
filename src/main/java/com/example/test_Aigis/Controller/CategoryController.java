@@ -19,7 +19,7 @@ public class CategoryController {
     private final CategoryService categoryService;
 
     @GetMapping("/category")
-    public ResponseEntity<?>categoryService(@RequestParam(defaultValue = "0" ,name = "id")Integer id){
+    public ResponseEntity<?>categoryController(@RequestParam(defaultValue = "0" ,name = "id")Integer id){
 
         var res = categoryService.categories(id);
 
