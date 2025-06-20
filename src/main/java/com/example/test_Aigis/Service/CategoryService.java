@@ -35,6 +35,7 @@ public class CategoryService {
 
         List<ListCategory>data = new ArrayList<>();
 
+        int idCat = 1;
         int count = 1 ;
         for (int i = 1 ; i <= 6 ; i++){
 
@@ -52,7 +53,7 @@ public class CategoryService {
             }
 
             data.add(ListCategory.builder()
-                            .id(count++)
+                            .id(idCat++)
                             .categories(cat)
                     .build());
 
