@@ -51,6 +51,7 @@ public class CategoryService {
                         .description("Description")
                         .category("c" + idCat)
                         .url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFrvr6wHUjK4lsHgShVe5ToYSv-rz7NF_ohUIhMK28H_mo0Dy8pSQ29RTimoozvUBT_VdNoMlprR31xdgI11x5LBCERcXUwlzMbG57NvVXqHc8dsfw63FTYb-dzqOO8wFoZRIZv9LQieBSIKnPRLUqAhQPppfv2INeZK1AVbUiijb7bJhAXvwPcfIYQAQ/s640/DEMOCRAZY.ID%20(6)%20(Custom).jpg")
+                                .detail(detail().get(j))
                         .build());
             }
 
@@ -106,5 +107,35 @@ public class CategoryService {
                 "Ketahanan Nasional"
         );
 
+    }
+
+    public List<String> detail() {
+        return List.of(
+                "Informasi seputar dunia perbankan dan kebijakan moneter.",
+                "Topik-topik aktual dari Danantara dan lingkup sosial.",
+                "Berita terkini seputar kondisi dan tren ekonomi.",
+                "Ulasan mendalam mengenai situasi politik nasional.",
+                "Perkembangan terbaru teknologi dan inovasi digital.",
+                "Isu dan perkembangan di dunia pendidikan.",
+                "Topik kesehatan masyarakat dan medis.",
+                "Transportasi umum, infrastruktur, dan kebijakan lalu lintas.",
+                "Energi terbarukan, sumber daya alam, dan kebijakan energi.",
+                "Perkembangan agrikultur dan isu petani.",
+                "Isu lingkungan hidup dan perubahan iklim.",
+                "Wisata domestik dan internasional serta rekomendasi destinasi.",
+                "Kreativitas anak bangsa dan industri kreatif.",
+                "Kabar startup lokal dan global.",
+                "Digitalisasi layanan keuangan dan fintech.",
+                "Keamanan siber dan data pribadi.",
+                "Pembangunan infrastruktur nasional dan proyek strategis.",
+                "Perdagangan online dan perkembangan e-commerce.",
+                "Tren terbaru di media sosial dan dampaknya.",
+                "Perkembangan AI, machine learning, dan big data.",
+                "Peluang dan risiko investasi.",
+                "Teknologi blockchain dan potensinya.",
+                "Program pemerintah dan layanan publik.",
+                "Isu hukum, hak asasi manusia, dan peraturan.",
+                "Ketahanan nasional dalam berbagai aspek strategis."
+        );
     }
 }

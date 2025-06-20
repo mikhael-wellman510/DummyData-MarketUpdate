@@ -19,5 +19,6 @@ public class Category {
     private String description;
     private String category;
     private String url;
+    private String detail;
 
 }
