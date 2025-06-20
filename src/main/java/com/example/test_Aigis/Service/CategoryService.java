@@ -45,7 +45,7 @@ public class CategoryService {
                int idCat = (j / 5) + 1;
                 cat.add(Category.builder()
                         .id(curr++)
-                        .tittle("Tittle")
+                        .tittle(title().get(j))
                         .dateTime("Date/Time")
                         .description("Description")
                         .category("c" + idCat)
@@ -71,6 +71,39 @@ public class CategoryService {
         }else {
             return List.of();
         }
+
+    }
+
+    public List<String> title(){
+
+
+        return  List.of(
+                "Perbankan",
+                "Danantara",
+                "Ekonomi",
+                "Politik",
+                "Teknologi",
+                "Pendidikan",
+                "Kesehatan",
+                "Transportasi",
+                "Energi",
+                "Pertanian",
+                "Lingkungan",
+                "Pariwisata",
+                "Industri Kreatif",
+                "Startup",
+                "Keuangan Digital",
+                "Cybersecurity",
+                "Infrastruktur",
+                "E-Commerce",
+                "Media Sosial",
+                "AI dan Data",
+                "Investasi",
+                "Blockchain",
+                "Pemerintahan",
+                "Hukum dan HAM",
+                "Ketahanan Nasional"
+        );
 
     }
 }
