@@ -13,6 +13,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CategoryService {
 
+    public List<String>listCategory(){
+
+        return List.of("Category 1" ,"Category 2" , "Category 3" , "Category 4");
+    }
+
     public List<Category>categories(Integer id){
 
         List<Category>data = new ArrayList<>();

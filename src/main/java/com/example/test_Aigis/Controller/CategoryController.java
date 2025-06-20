@@ -23,11 +23,10 @@ public class CategoryController {
 
     @GetMapping("/test")
     public ResponseEntity<?>testing(){
-        return ResponseEntity.ok("Cek");
+
+        var res = categoryService.listCategory();
+        return ResponseEntity.ok(res);
     }
 
-    @GetMapping("/test1")
-    public String test(){
-        return "Cek";
-    }
+
 }
