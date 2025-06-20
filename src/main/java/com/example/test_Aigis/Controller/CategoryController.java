@@ -19,9 +19,9 @@ public class CategoryController {
     private final CategoryService categoryService;
 
     @GetMapping("/category")
-    public ResponseEntity<?>categoryController(@RequestParam(defaultValue = "0" ,name = "id")Integer id){
+    public ResponseEntity<?>categoryController(@RequestParam(defaultValue = "" ,name = "cat")String cat){
         //dwdwdw
-        var res = categoryService.categories(id);
+        var res = categoryService.categories(cat);
 
         return ResponseEntity.ok(res);
     }
