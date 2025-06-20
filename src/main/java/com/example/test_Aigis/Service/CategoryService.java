@@ -3,6 +3,7 @@ package com.example.test_Aigis.Service;
 import com.example.test_Aigis.Dto.Category;
 import com.example.test_Aigis.Dto.CategoryName;
 import com.example.test_Aigis.Dto.Item;
+import com.example.test_Aigis.Dto.ListCategory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,21 +29,31 @@ public class CategoryService {
         return res;
     }
 
-    public List<Category>categories(Integer id){
+    public List<ListCategory>categories(Integer id){
 
-        List<Category>data = new ArrayList<>();
+        List<ListCategory>data = new ArrayList<>();
 
-        int count = 0 ;
+        int count = 1 ;
         for (int i = 1 ; i <= 6 ; i++){
 
-                data.add(Category.builder()
-                                .id(count++)
-                                .tittle("Tittle")
-                                .dateTime("Date/Time")
-                                .description("Description")
-                                .category("Category " + id)
-                                .url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFrvr6wHUjK4lsHgShVe5ToYSv-rz7NF_ohUIhMK28H_mo0Dy8pSQ29RTimoozvUBT_VdNoMlprR31xdgI11x5LBCERcXUwlzMbG57NvVXqHc8dsfw63FTYb-dzqOO8wFoZRIZv9LQieBSIKnPRLUqAhQPppfv2INeZK1AVbUiijb7bJhAXvwPcfIYQAQ/s640/DEMOCRAZY.ID%20(6)%20(Custom).jpg")
+            List<Category>cat =new ArrayList<>();
+
+            for (int j = 0 ; j < 6 ; j++){
+                cat.add(Category.builder()
+                        .id(count++)
+                        .tittle("Tittle")
+                        .dateTime("Date/Time")
+                        .description("Description")
+                        .category("Category " + id)
+                        .url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFrvr6wHUjK4lsHgShVe5ToYSv-rz7NF_ohUIhMK28H_mo0Dy8pSQ29RTimoozvUBT_VdNoMlprR31xdgI11x5LBCERcXUwlzMbG57NvVXqHc8dsfw63FTYb-dzqOO8wFoZRIZv9LQieBSIKnPRLUqAhQPppfv2INeZK1AVbUiijb7bJhAXvwPcfIYQAQ/s640/DEMOCRAZY.ID%20(6)%20(Custom).jpg")
                         .build());
+            }
+
+            data.add(ListCategory.builder()
+                            .id(count++)
+                            .categories(cat)
+                    .build());
+
         }
 
 
