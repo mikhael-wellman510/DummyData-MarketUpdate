@@ -18,6 +18,14 @@ public class CategoryController {
     //dd
     private final CategoryService categoryService;
 
+
+    @GetMapping("/search")
+    public ResponseEntity<?>searchByTitle(@RequestParam(defaultValue = "", name = "title")String title){
+        var res = categoryService.searchByTitle(title);
+
+        return ResponseEntity.ok(res);
+    }
+
     @GetMapping("/category")
     public ResponseEntity<?>categoryController(@RequestParam(defaultValue = "" ,name = "cat")String cat){
         //dwdwdw

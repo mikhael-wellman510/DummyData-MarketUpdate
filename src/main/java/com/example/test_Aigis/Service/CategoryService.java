@@ -18,6 +18,29 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class CategoryService {
 
+    public List<Category>searchByTitle(String keyword){
+//        List<Category>res = title().stream().filter(item -> item.toLowerCase().contains(keyword.toLowerCase())).toList();
+
+
+        List<Category>cat =new ArrayList<>();
+        int curr = 1;
+
+        for (int j = 0 ; j < 25 ; j++){
+            int idCat = (j / 5) + 1;
+            cat.add(Category.builder()
+                    .id(curr++)
+                    .tittle(title().get(j))
+                    .dateTime("Date/Time")
+                    .description("Description")
+                    .category("c" + idCat)
+                    .url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFrvr6wHUjK4lsHgShVe5ToYSv-rz7NF_ohUIhMK28H_mo0Dy8pSQ29RTimoozvUBT_VdNoMlprR31xdgI11x5LBCERcXUwlzMbG57NvVXqHc8dsfw63FTYb-dzqOO8wFoZRIZv9LQieBSIKnPRLUqAhQPppfv2INeZK1AVbUiijb7bJhAXvwPcfIYQAQ/s640/DEMOCRAZY.ID%20(6)%20(Custom).jpg")
+                    .detail(detail().get(j))
+                    .build());
+        }
+
+        return cat.stream().filter(item -> item.getTittle().toLowerCase().contains(keyword.toLowerCase())).toList();
+    }
+
     public List<CategoryName>listCategory(){
             List<CategoryName> res = new ArrayList<>();
             int id = 1;
