@@ -22,6 +22,11 @@ public class CategoryController {
     public String data(){
         return "Cek";
     }
+
+    @GetMapping("/testing2")
+    public String cek(){
+        return "tess";
+    }
     @GetMapping("/search")
     public ResponseEntity<?>searchByTitle(@RequestParam(defaultValue = "", name = "title")String title){
         var res = categoryService.searchByTitle(title);
