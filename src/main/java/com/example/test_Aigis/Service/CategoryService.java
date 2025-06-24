@@ -73,7 +73,7 @@ public class CategoryService {
                         .dateTime("Date/Time")
                         .description("Description")
                         .category("c" + idCat)
-                        .url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFrvr6wHUjK4lsHgShVe5ToYSv-rz7NF_ohUIhMK28H_mo0Dy8pSQ29RTimoozvUBT_VdNoMlprR31xdgI11x5LBCERcXUwlzMbG57NvVXqHc8dsfw63FTYb-dzqOO8wFoZRIZv9LQieBSIKnPRLUqAhQPppfv2INeZK1AVbUiijb7bJhAXvwPcfIYQAQ/s640/DEMOCRAZY.ID%20(6)%20(Custom).jpg")
+                        .url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gramedia.com%2Fliterasi%2Ftugas-bank-sentral%2F&psig=AOvVaw23aY3W9mvo2aArpzx7s-Ox&ust=1750817553577000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKi2qOX9iI4DFQAAAAAdAAAAABAE")
                                 .detail(detail().get(j))
                         .build());
             }
