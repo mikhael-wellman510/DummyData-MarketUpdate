@@ -18,7 +18,10 @@ public class CategoryController {
     //dd
     private final CategoryService categoryService;
 
-
+    @GetMapping("/tes")
+    public String data(){
+        return "Cek";
+    }
     @GetMapping("/search")
     public ResponseEntity<?>searchByTitle(@RequestParam(defaultValue = "", name = "title")String title){
         var res = categoryService.searchByTitle(title);

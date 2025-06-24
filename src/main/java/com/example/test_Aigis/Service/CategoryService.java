@@ -20,7 +20,7 @@ public class CategoryService {
 
     public List<Category>searchByTitle(String keyword){
 //        List<Category>res = title().stream().filter(item -> item.toLowerCase().contains(keyword.toLowerCase())).toList();
-
+    String cek = "strin";
 
         List<Category>cat =new ArrayList<>();
         int curr = 1;
