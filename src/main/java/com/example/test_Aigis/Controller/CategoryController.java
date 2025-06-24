@@ -18,7 +18,7 @@ public class CategoryController {
     //dd
     private final CategoryService categoryService;
 
-    @GetMapping("/tes")
+    @GetMapping("/tes2")
     public String data(){
         return "Cek";
     }
