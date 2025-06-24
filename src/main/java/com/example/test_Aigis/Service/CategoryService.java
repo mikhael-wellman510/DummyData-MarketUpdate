@@ -33,7 +33,7 @@ public class CategoryService {
                     .dateTime("Date/Time")
                     .description("Description")
                     .category("c" + idCat)
-                    .url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gramedia.com%2Fliterasi%2Ftugas-bank-sentral%2F&psig=AOvVaw23aY3W9mvo2aArpzx7s-Ox&ust=1750817553577000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKi2qOX9iI4DFQAAAAAdAAAAABAE")
+                    .url("https://media.istockphoto.com/id/640267784/id/foto/gedung-bank.jpg?s=612x612&w=0&k=20&c=Wi3-Y4YjB3wVMA3hKxlHtc2CrgK1QL9_U6163WCHL2g=")
                     .detail(detail().get(j))
                     .build());
         }
@@ -73,7 +73,7 @@ public class CategoryService {
                         .dateTime("Date/Time")
                         .description("Description")
                         .category("c" + idCat)
-                        .url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gramedia.com%2Fliterasi%2Ftugas-bank-sentral%2F&psig=AOvVaw23aY3W9mvo2aArpzx7s-Ox&ust=1750817553577000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKi2qOX9iI4DFQAAAAAdAAAAABAE")
+                        .url("https://media.istockphoto.com/id/640267784/id/foto/gedung-bank.jpg?s=612x612&w=0&k=20&c=Wi3-Y4YjB3wVMA3hKxlHtc2CrgK1QL9_U6163WCHL2g=")
                                 .detail(detail().get(j))
                         .build());
             }
