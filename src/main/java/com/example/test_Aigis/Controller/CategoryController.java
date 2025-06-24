@@ -18,15 +18,7 @@ public class CategoryController {
     //ddwdwdwd
     private final CategoryService categoryService;
 
-    @GetMapping("/tes2s")
-    public String data(){
-        return "Cek";
-    }
 
-    @GetMapping("/testing2")
-    public String cek(){
-        return "tess";
-    }
     @GetMapping("/search")
     public ResponseEntity<?>searchByTitle(@RequestParam(defaultValue = "", name = "title")String title){
         var res = categoryService.searchByTitle(title);
@@ -49,11 +41,7 @@ public class CategoryController {
         return ResponseEntity.ok(res);
     }
 
-    @GetMapping("/testData")
-    public void date(@RequestParam(value = "date" , required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date){
-        log.info("date : {} " , date);
 
-    }
 
 
 
