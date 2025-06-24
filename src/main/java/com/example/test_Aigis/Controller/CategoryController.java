@@ -15,10 +15,10 @@ import java.time.LocalDate;
 @RestController
 @RequiredArgsConstructor
 public class CategoryController {
-    //dd
+    //ddwdwdwd
     private final CategoryService categoryService;
 
-    @GetMapping("/tes2")
+    @GetMapping("/tes2s")
     public String data(){
         return "Cek";
     }
