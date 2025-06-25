@@ -68,24 +68,10 @@ public class MarketUpdatedService {
 
         List<MarketDto> data = new ArrayList<>();
 
-        data.add(MarketDto.builder()
-                .tittle("Market Sumary")
-                .data(List.of(
-                        "Lonjakan impor di Amerika Serikat (AS) xxxx",
-                        "Rentang perdagangan USD/IDR xxxx",
-                        "Pasar Obligasi Negara Indonesia xxxx",
-                        "Arus dana asing xxxx"
-                ))
-                .allData(List.of(
-                        "Lonjakan impor di Amerika Serikat (AS) terjadi menjelang kenaikan tarif dan menyebabkan neraca perdagangan mengalami defisit terbesar sepanjang masa. Pada Januari 2025, impor AS mencapai USD 402,1 miliar dan defisit perdagangan sebesar USD 91,5 miliar. Sebagai perbandingan, impor barang Indonesia pada saat yang sama sebesar USD 18 miliar atau kurang dari 5%. AS sempat tutup lebih dari 5% pada sesi sebelumnya, sejak 5 November 2024.",
-                        "Rentang perdagangan USD/IDR pada hari ini diperkirakan antara 16.100 – 16.400. Pada hari Kamis lalu, JISDOR Bank Indonesia berada di kisaran 16.250.",
-                        "Pasar Obligasi Negara Indonesia ditutup pada yield penutupan hari Kamis adalah 6,37% (1Y), 6,52% (3Y), 6,77% (5Y), 6,82% (10Y) dan 6,92% (15Y), sedangkan premi credit default swap (CDS) tenor 5 tahun berada di 84 bps.",
-                        "Arus dana asing dan penutupan indeks reksadana real estat terpantau ada tekanan. Indeks saham AS naik di tengah kenaikan biaya tenaga kerja dan suku bunga. Di pasar Indonesia, investor asing melakukan net sell senilai IDR 3,7 miliar, dan IDR 21,5 miliar, kepemilikan asing pada obligasi pemerintah naik IDR 544 miliar pada perdagangan 5 Maret 2025."
-                ))
-                .build());
+
 
         data.add(MarketDto.builder()
-                .tittle("Local News Update")
+                .tittle("Local Update")
                 .data(List.of(
                         "Harga Tandan Pangan Segar (TBS) ditetapkan sebesar Rp3.757 per KG, berlaku mulai 1 Maret 2025. Ini merupakan harga tertinggi yang tercatat di Indonesia",
                         "Mendag angkat bicara terkait kontroversi viral TikTok soal volume Minyakita: seharusnya 1 liter, bukan 750 ml.",
@@ -98,7 +84,7 @@ public class MarketUpdatedService {
                 .build());
 
         data.add(MarketDto.builder()
-                .tittle("Global News Updates")
+                .tittle("Regional & Global Updates")
                 .data(List.of(
                         "Presiden Trump menunda tarif barang USMCA hingga 2 April, sehingga membebaskan mobil, suku cadang, dan kalium (yang banyak digunakan untuk pupuk) dari bea masuk yang tinggi.",
                         "Malaysia menyetujui kontribusi EPF pekerja asing sebesar 2% mulai 4025.",
@@ -116,7 +102,7 @@ public class MarketUpdatedService {
                 .build());
 
         data.add(MarketDto.builder()
-                .tittle("Market Update")
+                .tittle("FX Market Update")
                 .data(List.of("Tidak ada pembaruan hari ini."))
                 .allData(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
                 .build());
@@ -128,7 +114,7 @@ public class MarketUpdatedService {
                 .build());
 
         data.add(MarketDto.builder()
-                .tittle("Indonesia SOV")
+                .tittle("Indon SOV")
                 .data(List.of("Tidak ada pembaruan hari ini."))
                 .allData(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
                 .build());
