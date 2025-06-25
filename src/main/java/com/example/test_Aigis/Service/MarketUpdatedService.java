@@ -85,7 +85,7 @@ public class MarketUpdatedService {
                 .build());
 
         data.add(MarketDto.builder()
-                .tittle("Domestic News Update")
+                .tittle("Local News Update")
                 .data(List.of(
                         "Harga Tandan Pangan Segar (TBS) ditetapkan sebesar Rp3.757 per KG, berlaku mulai 1 Maret 2025. Ini merupakan harga tertinggi yang tercatat di Indonesia",
                         "Mendag angkat bicara terkait kontroversi viral TikTok soal volume Minyakita: seharusnya 1 liter, bukan 750 ml.",
@@ -111,6 +111,24 @@ public class MarketUpdatedService {
 
         data.add(MarketDto.builder()
                 .tittle("Fixed Income")
+                .data(List.of("Tidak ada pembaruan hari ini."))
+                .allData(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
+                .build());
+
+        data.add(MarketDto.builder()
+                .tittle("Market Update")
+                .data(List.of("Tidak ada pembaruan hari ini."))
+                .allData(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
+                .build());
+
+        data.add(MarketDto.builder()
+                .tittle("Govvies Market")
+                .data(List.of("Tidak ada pembaruan hari ini."))
+                .allData(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
+                .build());
+
+        data.add(MarketDto.builder()
+                .tittle("Indonesia SOV")
                 .data(List.of("Tidak ada pembaruan hari ini."))
                 .allData(List.of("Pada hari ini, tidak terdapat pembaruan informasi mengenai instrumen pendapatan tetap seperti obligasi pemerintah, sukuk, maupun surat utang korporasi. Hal ini menunjukkan bahwa pasar obligasi dalam kondisi stabil atau belum ada rilis data baru dari otoritas atau pelaku pasar."))
                 .build());
