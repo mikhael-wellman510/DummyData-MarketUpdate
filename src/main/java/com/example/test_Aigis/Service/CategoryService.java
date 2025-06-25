@@ -18,14 +18,14 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class CategoryService {
 
-    public List<Category>searchByTitle(String keyword){
+    public List<Category> searchByTitle(String keyword) {
 //        List<Category>res = title().stream().filter(item -> item.toLowerCase().contains(keyword.toLowerCase())).toList();
-    String cek = "strin";
+        String cek = "strin";
 
-        List<Category>cat =new ArrayList<>();
+        List<Category> cat = new ArrayList<>();
         int curr = 1;
 
-        for (int j = 0 ; j < 25 ; j++){
+        for (int j = 0; j < 25; j++) {
             int idCat = (j / 5) + 1;
             cat.add(Category.builder()
                     .id(curr++)
@@ -41,68 +41,85 @@ public class CategoryService {
         return cat.stream().filter(item -> item.getTittle().toLowerCase().contains(keyword.toLowerCase())).toList();
     }
 
-    public List<CategoryName>listCategory(){
-            List<CategoryName> res = new ArrayList<>();
-            int id = 1;
-            for (int i = 1 ; i < 5 ; i++){
-                res.add(CategoryName.builder()
-                                .id(id++)
-                                .category("Category " + i)
-                                .categoryId("c" + i)
-                        .build());
-            }
+    public List<CategoryName> listCategory() {
+        List<CategoryName> res = new ArrayList<>();
+//        int id = 1;
+//            for (int i = 1 ; i < 5 ; i++){
+//                res.add(CategoryName.builder()
+//                                .id(id++)
+//                                .category("Category " + i)
+//                                .categoryId("c" + i)
+//                        .build());
+//            }
 
-            log.info("List terbaru : -----");
+        res.add(CategoryName.builder()
+                .id(1)
+                .category("GLOBAL")
+                .categoryId("c1")
+                .build());
+        res.add(CategoryName.builder()
+                .id(2)
+                .category("DOMESTIK")
+                .categoryId("c2")
+                .build());
+        res.add(CategoryName.builder()
+                .id(3)
+                .category("MARKET")
+                .categoryId("c3")
+                .build());
+
+
+        log.info("List terbaru : -----");
         return res;
     }
 
-    public List<Category>categories(String c){
+    public List<Category> categories(String c) {
 
 
-        log.info("Cek {} " , c);
+        log.info("Cek {} ", c);
 
 
-            List<Category>cat =new ArrayList<>();
-            int curr = 1;
+        List<Category> cat = new ArrayList<>();
+        int curr = 1;
 
-            for (int j = 0 ; j < 25 ; j++){
-               int idCat = (j / 5) + 1;
-                cat.add(Category.builder()
-                        .id(curr++)
-                        .tittle(title().get(j))
-                        .dateTime("Date/Time")
-                        .description("Description")
-                        .category("c" + idCat)
-                        .url("https://media.istockphoto.com/id/640267784/id/foto/gedung-bank.jpg?s=612x612&w=0&k=20&c=Wi3-Y4YjB3wVMA3hKxlHtc2CrgK1QL9_U6163WCHL2g=")
-                                .detail(detail().get(j))
-                        .build());
-            }
+        for (int j = 0; j < 25; j++) {
+            int idCat = (j / 5) + 1;
+            cat.add(Category.builder()
+                    .id(curr++)
+                    .tittle(title().get(j))
+                    .dateTime("Date/Time")
+                    .description("Description")
+                    .category("c" + idCat)
+                    .url("https://media.istockphoto.com/id/640267784/id/foto/gedung-bank.jpg?s=612x612&w=0&k=20&c=Wi3-Y4YjB3wVMA3hKxlHtc2CrgK1QL9_U6163WCHL2g=")
+                    .detail(detail().get(j))
+                    .build());
+        }
 
 
-        if (Objects.equals(c, "")){
+        if (Objects.equals(c, "")) {
 
             return cat;
-        }else if (c.startsWith("c")){
+        } else if (c.startsWith("c")) {
             int res = Integer.parseInt(c.substring(1));
-            log.info("res {} " , res);
-            if (res > 0 && res <= 5){
+            log.info("res {} ", res);
+            if (res > 0 && res <= 5) {
                 return cat.stream()
                         .filter(val -> val.getCategory().equals(c))
                         .toList();
-            }else {
+            } else {
                 return List.of();
             }
 
-        }else {
+        } else {
             return List.of();
         }
 
     }
 
-    public List<String> title(){
+    public List<String> title() {
 
 
-        return  List.of(
+        return List.of(
                 "Perbankan",
                 "Danantara",
                 "Ekonomi",
