@@ -55,17 +55,17 @@ public class CategoryService {
         res.add(CategoryName.builder()
                 .id(1)
                 .category("GLOBAL")
-                .categoryId("c1")
+                .categoryId("GLOBAL")
                 .build());
         res.add(CategoryName.builder()
                 .id(2)
                 .category("DOMESTIK")
-                .categoryId("c2")
+                .categoryId("DOMESTIK")
                 .build());
         res.add(CategoryName.builder()
                 .id(3)
                 .category("MARKET")
-                .categoryId("c3")
+                .categoryId("MARKET")
                 .build());
 
 
