@@ -59,13 +59,13 @@ public class CategoryService {
                 .build());
         res.add(CategoryName.builder()
                 .id(2)
-                .category("DOMESTIK")
-                .categoryId("DOMESTIK")
+                .category("DOMESTIC")
+                .categoryId("DOMESTIC")
                 .build());
         res.add(CategoryName.builder()
                 .id(3)
-                .category("MARKET")
-                .categoryId("MARKET")
+                .category("MARKETS")
+                .categoryId("MARKETS")
                 .build());
 
 
