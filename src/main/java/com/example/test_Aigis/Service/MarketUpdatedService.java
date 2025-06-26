@@ -30,7 +30,7 @@ public class MarketUpdatedService {
 
         for(int i = 0 ; i < 1 ; i++){
             res.add(IndicativeRatesDto.builder()
-                    .tittle("Cross Rates")
+                    .tittle("IDR Cross Rates")
                     .data(List.of(
                             Data.builder().currencyPair("AUD/EUR").last("12.33").prevWk("23.55").build(),
                             Data.builder().currencyPair("EUR/IDR").last("10.33").prevWk("21.44").build(),
@@ -51,12 +51,32 @@ public class MarketUpdatedService {
                     .build());
 
             res.add(IndicativeRatesDto.builder()
-                    .tittle("Spot Rates")
+                    .tittle("SPOT Rates")
                     .data(List.of(
                             Data.builder().currencyPair("AUD/EUR").last("0.65").prevWk("0.66").build(),
                             Data.builder().currencyPair("EUR/USD").last("0.24").prevWk("0.89").build(),
                             Data.builder().currencyPair("GBP/USD").last("1.23").prevWk("2.45").build(),
                             Data.builder().currencyPair("USD/JPY").last("4.66").prevWk("34.00").build()
+                    ))
+                    .build());
+
+            res.add(IndicativeRatesDto.builder()
+                    .tittle("Commodity Rates")
+                    .data(List.of(
+                            Data.builder().currencyPair("Gold (USD/Oz)").last("1920.55").prevWk("1895.30").build(),
+                            Data.builder().currencyPair("Silver (USD/Oz)").last("24.60").prevWk("23.80").build(),
+                            Data.builder().currencyPair("Crude Oil (USD/Barrel)").last("74.10").prevWk("70.90").build(),
+                            Data.builder().currencyPair("Natural Gas (USD/MMBtu)").last("2.85").prevWk("2.50").build()
+                    ))
+                    .build());
+
+            res.add(IndicativeRatesDto.builder()
+                    .tittle("Stock Market Rates")
+                    .data(List.of(
+                            Data.builder().currencyPair("IHSG").last("7200").prevWk("7100").build(),
+                            Data.builder().currencyPair("DJIA").last("34500").prevWk("34200").build(),
+                            Data.builder().currencyPair("NASDAQ").last("14500").prevWk("14300").build(),
+                            Data.builder().currencyPair("NIKKEI").last("32000").prevWk("31800").build()
                     ))
                     .build());
 
